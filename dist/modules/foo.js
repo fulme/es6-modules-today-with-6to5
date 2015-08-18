@@ -1,4 +1,7 @@
-"use strict";
-var _foo = 'foo';
+define(["exports"], function (exports) {
+  "use strict";
 
-exports.default = _foo;
+  var foo = "foo";
+
+  exports["default"] = foo;
+});

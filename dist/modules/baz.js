@@ -1,6 +1,9 @@
-"use strict";
-var print = function (what) {
-    return '[from print module]' + what;
-}
+define(["exports"], function (exports) {
+  "use strict";
 
-exports.default = print;
+  var print = function (what) {
+    return "[from print module]" + what;
+  };
+
+  exports["default"] = print;
+});

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		clean: ['dist'],
 		'6to5': {
 			options: {
-				modules: 'common'
+				modules: 'amd'
 			},
 
 			build: {
@@ -28,8 +28,18 @@ module.exports = function(grunt) {
 				flatten: true,
 				filter: 'isFile'
 			},
+		},
+
+		requirejs: {
+			compile: {
+				options: {
+					baseUrl: './',
+					name: 'dist/app.js',
+					out: 'dist/app.js'
+				}
+			}
 		}
 	});
 
-	grunt.registerTask('default', ['6to5','copy']);
+	grunt.registerTask('default', ['6to5','copy', 'requirejs']);
 }

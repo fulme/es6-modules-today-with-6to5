@@ -1,6 +1,1 @@
-"use strict";
-var foo = require("./modules/foo").default;
-var bar = require("./modules/bar").default;
-
-console.log('From module foo >>> ', foo);
-console.log('From module bar >>> ', bar);
+define("dist/modules/foo",["exports"],function(e){"use strict";var t="foo";e["default"]=t}),define("dist/modules/bar",["exports"],function(e){"use strict";var t="bar";e["default"]=t}),define("dist/app.js",["exports","./modules/foo","./modules/bar"],function(e,t,n){"use strict";var r=t["default"],i=n["default"],s=function(){console.log("From module foo >>> ",r),console.log("From module bar >>> ",i)};e["default"]=s});
