@@ -38,8 +38,18 @@ module.exports = function(grunt) {
 					out: 'dist/app.js'
 				}
 			}
+		},
+
+		watch: {
+			scripts: {
+				files: ['src/**/*.js'],
+				tasks: ['6to5','copy', 'requirejs'],
+				options: {
+					spawn: false
+				}
+			}
 		}
 	});
 
-	grunt.registerTask('default', ['6to5','copy', 'requirejs']);
+	grunt.registerTask('default', ['watch']);
 }
